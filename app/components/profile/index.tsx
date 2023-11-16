@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from 'next/cache';
 import { getGithubProfile } from '@/lib/get-github-profile';
 import { Block } from '../block';
 import styles from './profile.module.css';
@@ -28,6 +29,7 @@ export async function Profile({
     region?: string;
   };
 }) {
+  noStore();
   const profileData = await getGithubProfile(username);
 
   if (profileData?.message?.startsWith('API rate limit exceeded')) {
