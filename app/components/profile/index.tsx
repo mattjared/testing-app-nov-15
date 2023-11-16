@@ -40,7 +40,6 @@ export async function Profile({
   const daysOfShipping = handleDate(created_at).diffDays;
 
   const { city, cityNickname, region } = searchParams ?? {};
-  console.log("mattlook", {city, cityNickname, region});
 
   const firstName = name.split(' ')[0];
   const restOfName = name.split(' ').slice(1).join(' ');
