@@ -12,9 +12,8 @@ import { getGithubProfile } from './lib/get-github-profile';
 
 export default async function Home({ searchParams }: { searchParams: any }) {
   noStore();
-  // console.log('url', url)
+  console.log("searchParams.URLSearchParams", searchParams.URLSearchParams);
   console.log("searchParams", searchParams);
-  // const searchParams = url.searchParams;
   const profileData = await getGithubProfile(yourGithubUsername);
 
   if (!profileData) {
