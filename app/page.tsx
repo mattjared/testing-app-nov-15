@@ -9,7 +9,8 @@ import { NotFound } from './components/not-found';
 import { Profile } from './components/profile';
 import { getGithubProfile } from './lib/get-github-profile';
 
-export default async function Home({ searchParams }: { searchParams: any }) {
+export default async function Home({ searchParams, url }: { searchParams: any, url: any }) {
+  console.log('url', url)
   console.log("searchParams", searchParams);
   // const searchParams = url.searchParams;
   const profileData = await getGithubProfile(yourGithubUsername);
