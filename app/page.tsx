@@ -9,7 +9,7 @@ import { NotFound } from './components/not-found';
 import { Profile } from './components/profile';
 import { getGithubProfile } from './lib/get-github-profile';
 
-export default async function Home({ url }: { url: any }) {
+export default async function Home(url: any) {
   // console.log('url', url)
   console.log("geo", url);
   const geo = url.searchParams; 
