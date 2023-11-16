@@ -1,6 +1,7 @@
 // For an initial starting point, insert your GitHub username between the double quotes here.
 // Letter casing doesn't matter.
 const yourGithubUsername = 'mattjared';
+import { unstable_noStore as noStore } from 'next/cache';
 
 // During the workshop, leave the code below as-is.
 // But when you're ready, don't be afraid to jump in, make edits, try new things, and make it your own!
@@ -10,6 +11,7 @@ import { Profile } from './components/profile';
 import { getGithubProfile } from './lib/get-github-profile';
 
 export default async function Home({ searchParams }: { searchParams: any }) {
+  noStore();
   // console.log('url', url)
   console.log("searchParams", searchParams);
   // const searchParams = url.searchParams;
