@@ -11,7 +11,7 @@ import { getGithubProfile } from './lib/get-github-profile';
 
 export default async function Home(url: any) {
   // console.log('url', url)
-  console.log("geo", url);
+  console.log("geo", url.searchParamsggo);
   const geo = url.searchParams; 
   // const searchParams = url.searchParams;
   const profileData = await getGithubProfile(yourGithubUsername);
